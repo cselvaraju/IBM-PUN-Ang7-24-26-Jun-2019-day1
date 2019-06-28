@@ -1,0 +1,32 @@
+<div>
+  <h4>Demo Component</h4>
+  Your message is: {{ message }}
+  <p></p>
+  <h5>List of Vegetables</h5>
+  <ul>
+    <li *ngFor="let veg of vegetables; index as n">
+      Index: {{ n }}
+      Name: {{ veg.name }}
+      Price: {{ veg.price }}
+      &nbsp;
+      <button (click)="deleteVeg(n)">X</button>
+    </li>
+  </ul>
+
+  <button (click)="btnClicked($event)">Click Me!!</button>
+  <div>
+    <label>
+      Favourite Actor:
+      <input type="text" [(ngModel)]="favActor">
+    </label>
+    <br>
+    Your favourite actor: {{ favActor }}
+  </div>
+
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Favorite food">
+    </mat-form-field>
+  </form>
+
+</div>
